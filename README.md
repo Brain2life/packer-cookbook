@@ -22,4 +22,4 @@ packer build <filename>.pkr.hcl
 ```
 
 ## Templates
-- [AWS AMI based on Ubuntu 22.04 with pre-installed aws, kubectl and eksctl CLI tools](./templates/aws/ubuntu-kubectl-eksctl-awscli/)
+- [AWS AMI for Bastion host with pre-installed tools to communicate and work with EKS cluster](./templates/aws/bastion-host-to-eks/)

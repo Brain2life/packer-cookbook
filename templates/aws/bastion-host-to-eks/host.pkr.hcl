@@ -49,6 +49,9 @@ build {
       # Install kubectl
       "sudo snap install kubectl --classic",
 
+      # Install k9s
+      "sudo snap install k9s",
+
       # Install helm
       "sudo snap install helm --classic",
 

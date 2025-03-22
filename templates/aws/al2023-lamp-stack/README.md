@@ -15,6 +15,32 @@ The **LAMP stack** is a popular open-source software stack used for developing a
 3. **PHP queries the MySQL database** --> Retrieves data needed for dynamic content.
 4. **Response is generated** --> The PHP script processes the data and sends HTML to the user's browser.
 
+### What is FastCGI?
+[**FastCGI**](https://en.wikipedia.org/wiki/FastCGI) is a **high-performance protocol** used to interface **web servers** (like Apache or NGINX) with **external applications** (like PHP, Python, or Ruby scripts). It's an improved version of the older **CGI (Common Gateway Interface)** standard.
+
+#### **What Does FastCGI Do?**
+It acts as a **middleman** between the web server and application code:
+
+- When a user requests a dynamic page (like a PHP file), the server passes that request to FastCGI.
+- FastCGI then calls the application interpreter (like `php-fpm` for PHP), processes the request, and returns the result to the web server, which sends it to the user.
+
+#### **Why FastCGI Over CGI?**
+
+| Feature         | CGI                      | FastCGI                         |
+|-----------------|--------------------------|----------------------------------|
+| Performance     | Slow (starts a new process per request) | Fast (reuses long-running processes) |
+| Scalability     | Poor                     | Good                             |
+| Resource Usage  | High                     | Lower (fewer processes)          |
+| Persistence     | None (stateless)         | Persistent (keeps processes alive) |
+
+
+#### **Common Use Case**
+In **LAMP** or **LEMP** stacks, **PHP-FPM** (FastCGI Process Manager) is the most common FastCGI implementation:
+
+```bash
+sudo apt install php-fpm
+```
+
 ### Why Use LAMP?
 - Open-source and cost-effective.
 - Reliable, flexible, and widely supported by open-source community.

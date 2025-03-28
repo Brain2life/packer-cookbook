@@ -24,3 +24,4 @@ packer build <filename>.pkr.hcl
 ## Templates
 - [AWS AMI for Bastion host with pre-installed tools to communicate and work with EKS cluster](./templates/aws/bastion-host-to-eks/)
 - [AWS AMI for LAMP stack based on AL2023](./templates/aws/al2023-lamp-stack/)
+- [AWS AMI for Gitea self-hosted Git service](./templates/aws/gitea/)

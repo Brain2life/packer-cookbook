@@ -8,11 +8,11 @@ packer {
 }
 
 source "amazon-ebs" "gitea" {
-  region      = "us-east-1"
-  source_ami  = "ami-0a25f237e97fa2b5e" # Ubuntu 20.04 LTS in us-east-1 region
+  region        = "us-east-1"
+  source_ami    = "ami-0a25f237e97fa2b5e" # Ubuntu 20.04 LTS in us-east-1 region
   instance_type = "t2.micro"
-  ssh_username = "ubuntu"
-  ami_name    = "gitea"
+  ssh_username  = "ubuntu"
+  ami_name      = "gitea"
 }
 
 build {

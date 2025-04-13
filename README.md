@@ -25,3 +25,4 @@ packer build <filename>.pkr.hcl
 - [AWS AMI for Bastion host with pre-installed tools to communicate and work with EKS cluster](./templates/aws/bastion-host-to-eks/)
 - [AWS AMI for LAMP stack based on AL2023](./templates/aws/al2023-lamp-stack/)
 - [AWS AMI for Gitea self-hosted Git service](./templates/aws/gitea/)
+- [AWS AMI for Jenkins server with Trivy and SonarQube](./templates/aws/jenkins-trivy-sonarqube/)

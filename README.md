@@ -26,3 +26,4 @@ packer build <filename>.pkr.hcl
 - [AWS AMI for LAMP stack based on AL2023](./templates/aws/al2023-lamp-stack/)
 - [AWS AMI for Gitea self-hosted Git service](./templates/aws/gitea/)
 - [AWS AMI for Jenkins server with Trivy and SonarQube](./templates/aws/jenkins-trivy-sonarqube/)
+- [AWS AMI with S3 Mountpoint Client installed](./templates/aws/ubuntu-with-s3mount/)

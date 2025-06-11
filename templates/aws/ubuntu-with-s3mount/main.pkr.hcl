@@ -32,33 +32,33 @@ build {
       "echo set debconf to Noninteractive",
       "echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections",
 
-      "# Download the Mountpoint for Amazon S3 .deb package",
+      # Download the Mountpoint for Amazon S3 .deb package,
       "wget $URL_BASE/mount-s3.deb -O /tmp/mount-s3.deb",
 
-      "# Install the .deb package",
+      # Install the .deb package,
       "sudo apt-get update",
       "sudo apt-get install -y /tmp/mount-s3.deb",
 
-      "# Verify installation",
+      # Verify installation,
       "mount-s3 --version",
 
-      "# Install GnuPG",
+      # Install GnuPG,
       "sudo apt-get update",
       "sudo apt-get install -y gnupg",
 
-      "# Download the Mountpoint public key",
+      # Download the Mountpoint public key,
       "wget https://s3.amazonaws.com/mountpoint-s3-release/public_keys/KEYS -O /tmp/KEYS",
 
-      "# Import the key",
+      # Import the key,
       "gpg --import /tmp/KEYS",
 
-      "# Verify the key fingerprint",
+      # Verify the key fingerprint,
       "gpg --fingerprint mountpoint-s3@amazon.com | grep '673F E406 1506 BB46 9A0E  F857 BE39 7A52 B086 DA5A'",
 
-      "# Download the signature file (for integrity check)",
+      # Download the signature file (for integrity check),
       "wget $URL_BASE/mount-s3.deb.asc -O /tmp/mount-s3.deb.asc",
 
-      "# Verify the downloaded package",
+      # Verify the downloaded package,
       "gpg --verify /tmp/mount-s3.deb.asc /tmp/mount-s3.deb"
     ]
   }
